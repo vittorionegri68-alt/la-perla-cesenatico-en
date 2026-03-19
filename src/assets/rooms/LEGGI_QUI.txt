@@ -1,0 +1,12 @@
+Cartella per le foto della struttura.
+
+Aggiungi qui le foto in formato JPG o WebP.
+Nomi consigliati:
+  - Cucina_1.jpg
+  - Soggiorno_1.jpg
+  - Camera_1.jpg
+  - Bagno_1.jpg
+  - Esterno_1.jpg
+  - Panorama_1.jpg
+
+Poi aggiorna gli import in src/App.jsx (sezione IMMAGINI).
