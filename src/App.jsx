@@ -31,7 +31,7 @@ const C = {
   text:     "#1a1612",
   textMid:  "#5a5248",
   textSoft: "#9a9088",
-  gold:     "#a0782a",
+  gold:     "#9FD0D1",
   border:   "rgba(160,120,42,0.15)",
   cardBg:   "#ffffff",
   shadow:   "0 4px 24px rgba(26,22,18,0.08)",
@@ -94,19 +94,19 @@ function Nav() {
     }}>
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 1.5rem", display: "flex", alignItems: "center", justifyContent: "space-between", height: 68 }}>
         <div style={{ display: "flex", alignItems: "center", gap: "0.65rem" }}>
-          <div style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.2rem", color: C.gold, letterSpacing: "0.08em", fontWeight: 700, lineHeight: 1.1 }}>
+          <div style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1.2rem", color: C.gold, letterSpacing: "0.08em", fontWeight: 700, lineHeight: 1.1 }}>
             LA PERLA<br /><span style={{ fontSize: "0.72rem", letterSpacing: "0.18em" }}>DEL MARE</span>
           </div>
         </div>
         <div style={{ display: "flex", gap: "2rem", alignItems: "center" }} className="desk-nav">
           {links.map((l, i) => (
-            <a key={l} href={`#${ids[i]}`} style={{ color: C.textMid, textDecoration: "none", fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", transition: "color 0.2s" }}
+            <a key={l} href={`#${ids[i]}`} style={{ color: C.textMid, textDecoration: "none", fontSize: "0.78rem", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", transition: "color 0.2s" }}
               onMouseEnter={e => e.target.style.color = C.gold} onMouseLeave={e => e.target.style.color = C.textMid}>
               {l}
             </a>
           ))}
           <a href={STRUTTURA.airbnb} target="_blank" rel="noopener noreferrer"
-            style={{ background: C.gold, color: "#fff", padding: "0.5rem 1.3rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", transition: "background 0.2s" }}
+            style={{ background: C.gold, color: "#fff", padding: "0.5rem 1.3rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", transition: "background 0.2s" }}
             onMouseEnter={e => e.currentTarget.style.background = "#8a6520"}
             onMouseLeave={e => e.currentTarget.style.background = C.gold}>
             BOOK NOW
@@ -115,7 +115,7 @@ function Nav() {
             <div style={{ display: "flex", gap: "0.25rem", borderLeft: `1px solid ${C.border}`, paddingLeft: "1rem" }}>
               {STRUTTURA.lingue.map((lng, i) => (
                 <a key={lng.code} href={lng.url}
-                  style={{ color: i === 0 ? C.gold : C.textSoft, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", padding: "0.2rem 0.3rem" }}
+                  style={{ color: i === 0 ? C.gold : C.textSoft, textDecoration: "none", fontSize: "0.68rem", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", padding: "0.2rem 0.3rem" }}
                   onMouseEnter={e => e.currentTarget.style.color = C.gold}
                   onMouseLeave={e => e.currentTarget.style.color = i === 0 ? C.gold : C.textSoft}>
                   {lng.code}
@@ -134,7 +134,7 @@ function Nav() {
         <div style={{ background: C.bg, padding: "1rem 1.5rem 1.5rem", borderTop: `1px solid ${C.border}` }}>
           {links.map((l, i) => (
             <a key={l} href={`#${ids[i]}`} onClick={() => setOpen(false)}
-              style={{ display: "block", color: C.textMid, textDecoration: "none", padding: "0.65rem 0", fontSize: "0.9rem", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", borderBottom: `1px solid ${C.border}` }}>
+              style={{ display: "block", color: C.textMid, textDecoration: "none", padding: "0.65rem 0", fontSize: "0.9rem", letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", borderBottom: `1px solid ${C.border}` }}>
               {l}
             </a>
           ))}
@@ -167,22 +167,22 @@ function Hero() {
           <div style={{ flex: "1 1 320px", minWidth: 0 }}>
             <div style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(18px)", transition: "all 0.7s ease 0.15s", display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.3rem" }}>
               <span style={{ display: "inline-block", width: 32, height: 1, background: C.gold }} />
-              <span style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }}>{STRUTTURA.heroTagline}</span>
+              <span style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif" }}>{STRUTTURA.heroTagline}</span>
             </div>
-            <h1 style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(28px)", transition: "all 0.85s ease 0.3s", fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(2.6rem,5.5vw,5rem)", fontWeight: 700, color: C.text, lineHeight: 1.04, letterSpacing: "-0.02em", margin: "0 0 1.2rem" }}>
+            <h1 style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(28px)", transition: "all 0.85s ease 0.3s", fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(2.6rem,5.5vw,5rem)", fontWeight: 700, color: C.text, lineHeight: 1.04, letterSpacing: "-0.02em", margin: "0 0 1.2rem" }}>
               {STRUTTURA.heroTitle}<br /><span style={{ color: C.gold, fontStyle: "italic" }}>{STRUTTURA.heroTitleItalic}</span>
             </h1>
-            <p style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(24px)", transition: "all 0.85s ease 0.46s", fontSize: "clamp(0.93rem,1.8vw,1.08rem)", color: C.textMid, lineHeight: 1.82, margin: "0 0 2rem", fontFamily: "'DM Sans',sans-serif" }}>
+            <p style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(24px)", transition: "all 0.85s ease 0.46s", fontSize: "clamp(0.93rem,1.8vw,1.08rem)", color: C.textMid, lineHeight: 1.82, margin: "0 0 2rem", fontFamily: "'Space Grotesk',sans-serif" }}>
               {STRUTTURA.heroSubtitle}
             </p>
             <div style={{ opacity: loaded?1:0, transform: loaded?"translateY(0)":"translateY(24px)", transition: "all 0.85s ease 0.6s", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <a href={STRUTTURA.airbnb} target="_blank" rel="noopener noreferrer"
-                style={{ background: C.gold, color: "#fff", padding: "0.95rem 2rem", fontSize: "0.8rem", fontWeight: 800, letterSpacing: "0.13em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", boxShadow: "0 4px 20px rgba(160,120,42,0.25)", transition: "all 0.25s", whiteSpace: "nowrap" }}
+                style={{ background: C.gold, color: "#fff", padding: "0.95rem 2rem", fontSize: "0.8rem", fontWeight: 800, letterSpacing: "0.13em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", boxShadow: "0 4px 20px rgba(160,120,42,0.25)", transition: "all 0.25s", whiteSpace: "nowrap" }}
                 onMouseEnter={e => { e.currentTarget.style.background="#8a6520"; e.currentTarget.style.transform="translateY(-2px)"; }}
                 onMouseLeave={e => { e.currentTarget.style.background=C.gold; e.currentTarget.style.transform="translateY(0)"; }}>
                 Book on Airbnb ↗
               </a>
-              <a href="#apartment" style={{ border: "1.5px solid rgba(160,120,42,0.35)", color: C.textMid, padding: "0.95rem 1.75rem", fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", transition: "all 0.25s", whiteSpace: "nowrap" }}
+              <a href="#apartment" style={{ border: "1.5px solid rgba(160,120,42,0.35)", color: C.textMid, padding: "0.95rem 1.75rem", fontSize: "0.8rem", letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", transition: "all 0.25s", whiteSpace: "nowrap" }}
                 onMouseEnter={e => { e.currentTarget.style.borderColor=C.gold; e.currentTarget.style.color=C.text; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor="rgba(160,120,42,0.35)"; e.currentTarget.style.color=C.textMid; }}>
                 Discover more
@@ -191,8 +191,8 @@ function Hero() {
             <div style={{ opacity: loaded?1:0, transition: "opacity 0.8s ease 0.78s", display: "flex", gap: "2rem", marginTop: "2.5rem", paddingTop: "1.75rem", borderTop: `1px solid ${C.border}`, flexWrap: "wrap" }}>
               {STRUTTURA.stats.map(({ v, l }) => (
                 <div key={l}>
-                  <div style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.3rem", color: C.gold, fontWeight: 700 }}>{v}</div>
-                  <div style={{ fontSize: "0.66rem", color: C.textSoft, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginTop: 2 }}>{l}</div>
+                  <div style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1.3rem", color: C.gold, fontWeight: 700 }}>{v}</div>
+                  <div style={{ fontSize: "0.66rem", color: C.textSoft, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", marginTop: 2 }}>{l}</div>
                 </div>
               ))}
             </div>
@@ -238,13 +238,13 @@ function Apartment() {
           </Reveal>
           <Reveal delay={120}>
             <div>
-              <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
+              <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
                 <span style={{ width: 26, height: 1, background: C.gold, display: "inline-block" }} /> The Apartment
               </div>
-              <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.8rem,3.5vw,3rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, marginBottom: "1.2rem", letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(1.8rem,3.5vw,3rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, marginBottom: "1.2rem", letterSpacing: "-0.02em" }}>
                 {STRUTTURA.aptTitle}<br /><span style={{ color: C.gold, fontStyle: "italic" }}>{STRUTTURA.aptTitleItalic}</span>
               </h2>
-              <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.2rem" }}>
+              <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'Space Grotesk',sans-serif", marginBottom: "1.2rem" }}>
                 {STRUTTURA.aptDescrizione}
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6px", background: C.border, marginBottom: "2rem" }}>
@@ -253,13 +253,13 @@ function Apartment() {
                     onMouseEnter={e => e.currentTarget.style.background=C.bg2}
                     onMouseLeave={e => e.currentTarget.style.background=C.cardBg}>
                     <div style={{ fontSize: "1.25rem", marginBottom: "0.4rem" }}>{icon}</div>
-                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.8rem", color: C.text, fontWeight: 600, marginBottom: "0.2rem" }}>{title}</div>
-                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.72rem", color: C.textSoft }}>{desc}</div>
+                    <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.8rem", color: C.text, fontWeight: 600, marginBottom: "0.2rem" }}>{title}</div>
+                    <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.72rem", color: C.textSoft }}>{desc}</div>
                   </div>
                 ))}
               </div>
               <a href={STRUTTURA.airbnb} target="_blank" rel="noopener noreferrer"
-                style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.9rem 1.8rem", fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", boxShadow: "0 4px 18px rgba(160,120,42,0.22)", transition: "all 0.25s" }}
+                style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.9rem 1.8rem", fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", boxShadow: "0 4px 18px rgba(160,120,42,0.22)", transition: "all 0.25s" }}
                 onMouseEnter={e => { e.currentTarget.style.background="#8a6520"; e.currentTarget.style.transform="translateY(-2px)"; }}
                 onMouseLeave={e => { e.currentTarget.style.background=C.gold; e.currentTarget.style.transform="translateY(0)"; }}>
                 Check availability on Airbnb ↗
@@ -281,10 +281,10 @@ function Location() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <Reveal>
           <div style={{ marginBottom: "3.5rem" }}>
-            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
               <span style={{ width: 26, height: 1, background: C.gold, display: "inline-block" }} /> Strategic Location
             </div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, maxWidth: 600, letterSpacing: "-0.02em" }}>
+            <h2 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, maxWidth: 600, letterSpacing: "-0.02em" }}>
               In the heart of Cesenatico,<br /><span style={{ color: C.gold, fontStyle: "italic" }}>just steps from the sea.</span>
             </h2>
           </div>
@@ -292,17 +292,17 @@ function Location() {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }} className="loc-grid">
           <Reveal>
             <div>
-              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.textSoft, marginBottom: "1.1rem" }}>KEY DISTANCES</h3>
+              <h3 style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.textSoft, marginBottom: "1.1rem" }}>KEY DISTANCES</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.6px", background: C.border }}>
                 {STRUTTURA.distanze.map(({ label, time, mode }) => (
                   <div key={label} style={{ background: C.cardBg, padding: "0.85rem 1rem", display: "flex", alignItems: "center", gap: "0.75rem", transition: "background 0.2s" }}
                     onMouseEnter={e => e.currentTarget.style.background=C.bg2}
                     onMouseLeave={e => e.currentTarget.style.background=C.cardBg}>
                     <div style={{ flex: 1 }}>
-                      <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.84rem", color: C.text, fontWeight: 500 }}>{label}</div>
-                      <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.7rem", color: C.textSoft, marginTop: 2 }}>{mode}</div>
+                      <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.84rem", color: C.text, fontWeight: 500 }}>{label}</div>
+                      <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.7rem", color: C.textSoft, marginTop: 2 }}>{mode}</div>
                     </div>
-                    <div style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "0.95rem", color: C.gold, fontWeight: 600, whiteSpace: "nowrap" }}>{time}</div>
+                    <div style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "0.95rem", color: C.gold, fontWeight: 600, whiteSpace: "nowrap" }}>{time}</div>
                   </div>
                 ))}
               </div>
@@ -310,7 +310,7 @@ function Location() {
           </Reveal>
           <div>
             <Reveal delay={100}>
-              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.textSoft, marginBottom: "1.1rem" }}>THINGS TO DO NEARBY</h3>
+              <h3 style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: C.textSoft, marginBottom: "1.1rem" }}>THINGS TO DO NEARBY</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.6px", background: C.border }}>
                 {STRUTTURA.esperienze.map(({ icon, title, desc }) => (
                   <div key={title} style={{ display: "flex", gap: "1rem", marginBottom: "0.6px", alignItems: "flex-start", background: C.cardBg, padding: "0.85rem 1rem", transition: "background 0.2s" }}
@@ -318,8 +318,8 @@ function Location() {
                     onMouseLeave={e => e.currentTarget.style.background=C.cardBg}>
                     <span style={{ fontSize: "1.25rem", flexShrink: 0, marginTop: 2 }}>{icon}</span>
                     <div>
-                      <div style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1rem", color: C.text, fontWeight: 600, marginBottom: "0.2rem" }}>{title}</div>
-                      <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.82rem", color: C.textMid, lineHeight: 1.65 }}>{desc}</div>
+                      <div style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1rem", color: C.text, fontWeight: 600, marginBottom: "0.2rem" }}>{title}</div>
+                      <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.82rem", color: C.textMid, lineHeight: 1.65 }}>{desc}</div>
                     </div>
                   </div>
                 ))}
@@ -352,8 +352,8 @@ function HowItWorks() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: "4.5rem" }}>
-            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Simple from start to finish</div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.85rem" }}>Simple from start to finish</div>
+            <h2 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
               Your stay by the sea,<br /><span style={{ color: C.gold, fontStyle: "italic" }}>hassle-free.</span>
             </h2>
           </div>
@@ -364,10 +364,10 @@ function HowItWorks() {
             <Reveal key={n} delay={parseInt(n)*60}>
               <div style={{ padding: "2rem 1.5rem", textAlign: "center" }}>
                 <div style={{ width: 50, height: 50, border: `1px solid ${C.border}`, margin: "0 auto 1.3rem", display: "flex", alignItems: "center", justifyContent: "center", background: C.cardBg, position: "relative", zIndex: 1, boxShadow: C.shadow }}>
-                  <span style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", color: C.gold, fontSize: "0.88rem", fontWeight: 700 }}>{n}</span>
+                  <span style={{ fontFamily: "'Lora','Georgia',serif", color: C.gold, fontSize: "0.88rem", fontWeight: 700 }}>{n}</span>
                 </div>
-                <h3 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.12rem", color: C.text, marginBottom: "0.6rem", fontWeight: 600 }}>{t}</h3>
-                <p style={{ fontSize: "0.85rem", color: C.textMid, lineHeight: 1.75, fontFamily: "'DM Sans',sans-serif", margin: 0 }}>{b}</p>
+                <h3 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1.12rem", color: C.text, marginBottom: "0.6rem", fontWeight: 600 }}>{t}</h3>
+                <p style={{ fontSize: "0.85rem", color: C.textMid, lineHeight: 1.75, fontFamily: "'Space Grotesk',sans-serif", margin: 0 }}>{b}</p>
               </div>
             </Reveal>
           ))}
@@ -385,8 +385,8 @@ function Testimonials() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <Reveal>
           <div style={{ marginBottom: "3.5rem" }}>
-            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Real Experiences</div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.85rem" }}>Real Experiences</div>
+            <h2 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
               What our guests<br /><span style={{ color: C.gold, fontStyle: "italic" }}>are saying.</span>
             </h2>
           </div>
@@ -398,10 +398,10 @@ function Testimonials() {
                 onMouseEnter={e => e.currentTarget.style.background=C.bg2}
                 onMouseLeave={e => e.currentTarget.style.background=C.cardBg}>
                 <div style={{ color: C.gold, fontSize: "0.9rem", letterSpacing: "0.06em", marginBottom: "1rem" }}>{"★★★★★"}</div>
-                <p style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.05rem", color: C.text, lineHeight: 1.75, fontStyle: "italic", marginBottom: "1.75rem" }}>"{quote}"</p>
+                <p style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1.05rem", color: C.text, lineHeight: 1.75, fontStyle: "italic", marginBottom: "1.75rem" }}>"{quote}"</p>
                 <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: "1.1rem" }}>
-                  <div style={{ fontFamily: "'DM Sans',sans-serif", color: C.text, fontSize: "0.85rem", fontWeight: 600 }}>{name}</div>
-                  <div style={{ fontFamily: "'DM Sans',sans-serif", color: C.textSoft, fontSize: "0.75rem", marginTop: 3 }}>{origin}</div>
+                  <div style={{ fontFamily: "'Space Grotesk',sans-serif", color: C.text, fontSize: "0.85rem", fontWeight: 600 }}>{name}</div>
+                  <div style={{ fontFamily: "'Space Grotesk',sans-serif", color: C.textSoft, fontSize: "0.75rem", marginTop: 3 }}>{origin}</div>
                 </div>
               </div>
             </Reveal>
@@ -409,9 +409,9 @@ function Testimonials() {
         </div>
         <Reveal delay={160}>
           <div style={{ marginTop: "2.25rem", display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap" }}>
-            <div style={{ color: C.textSoft, fontSize: "0.73rem", fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.12em", textTransform: "uppercase" }}>On Airbnb</div>
+            <div style={{ color: C.textSoft, fontSize: "0.73rem", fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "0.12em", textTransform: "uppercase" }}>On Airbnb</div>
             {["★ 4.96 / 5", "27 Reviews", "Superhost"].map(b => (
-              <div key={b} style={{ border: `1px solid ${C.border}`, padding: "0.3rem 0.85rem", fontSize: "0.72rem", color: C.gold, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.08em", background: C.cardBg }}>{b}</div>
+              <div key={b} style={{ border: `1px solid ${C.border}`, padding: "0.3rem 0.85rem", fontSize: "0.72rem", color: C.gold, fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "0.08em", background: C.cardBg }}>{b}</div>
             ))}
           </div>
         </Reveal>
@@ -435,19 +435,19 @@ function About() {
         </Reveal>
         <Reveal delay={120}>
           <div>
-            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
               <span style={{ width: 26, height: 1, background: C.gold, display: "inline-block" }} /> Our Story
             </div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.7rem,3vw,2.7rem)", color: C.text, fontWeight: 700, lineHeight: 1.15, marginBottom: "1.2rem", letterSpacing: "-0.02em" }}>
+            <h2 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(1.7rem,3vw,2.7rem)", color: C.text, fontWeight: 700, lineHeight: 1.15, marginBottom: "1.2rem", letterSpacing: "-0.02em" }}>
               {STRUTTURA.aboutTitolo}<br /><span style={{ color: C.gold, fontStyle: "italic" }}>{STRUTTURA.aboutTitoloItalic}</span>
             </h2>
-            <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1rem" }}>{STRUTTURA.aboutTesto1}</p>
-            <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.75rem" }}>{STRUTTURA.aboutTesto2}</p>
+            <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'Space Grotesk',sans-serif", marginBottom: "1rem" }}>{STRUTTURA.aboutTesto1}</p>
+            <p style={{ fontSize: "0.94rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'Space Grotesk',sans-serif", marginBottom: "1.75rem" }}>{STRUTTURA.aboutTesto2}</p>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               {STRUTTURA.aboutPunti.map(item => (
                 <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "0.6rem" }}>
                   <span style={{ color: C.gold, fontSize: "0.6rem", marginTop: "0.3rem", flexShrink: 0 }}>◆</span>
-                  <span style={{ fontSize: "0.87rem", color: C.textMid, fontFamily: "'DM Sans',sans-serif", lineHeight: 1.6 }}>{item}</span>
+                  <span style={{ fontSize: "0.87rem", color: C.textMid, fontFamily: "'Space Grotesk',sans-serif", lineHeight: 1.6 }}>{item}</span>
                 </div>
               ))}
             </div>
@@ -469,10 +469,10 @@ function Blog() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <Reveal>
           <div style={{ marginBottom: "3.5rem" }}>
-            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.85rem", display: "flex", alignItems: "center", gap: "0.65rem" }}>
               <span style={{ width: 26, height: 1, background: C.gold, display: "inline-block" }} /> Stories Storie & Consigli Tips
             </div>
-            <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
+            <h2 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(1.9rem,4vw,3.2rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, letterSpacing: "-0.02em" }}>
               Discover Cesenatico<br /><span style={{ color: C.gold, fontStyle: "italic" }}>through our eyes.</span>
             </h2>
           </div>
@@ -486,12 +486,12 @@ function Blog() {
                   onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-4px)"; e.currentTarget.style.boxShadow = "0 12px 40px rgba(26,22,18,0.14)"; }}
                   onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = C.shadow; }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
-                    <span style={{ fontSize: "0.62rem", letterSpacing: "0.18em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", border: `1px solid ${C.border}`, padding: "0.2rem 0.6rem" }}>{post.categoria}</span>
-                    <span style={{ fontSize: "0.68rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif" }}>{new Date(post.data).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+                    <span style={{ fontSize: "0.62rem", letterSpacing: "0.18em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", border: `1px solid ${C.border}`, padding: "0.2rem 0.6rem" }}>{post.categoria}</span>
+                    <span style={{ fontSize: "0.68rem", color: C.textSoft, fontFamily: "'Space Grotesk',sans-serif" }}>{new Date(post.data).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
                   </div>
-                  <h3 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.25rem", color: C.text, fontWeight: 700, lineHeight: 1.2, marginBottom: "0.85rem", letterSpacing: "-0.01em" }}>{post.titolo}</h3>
-                  <p style={{ fontSize: "0.83rem", color: C.textMid, lineHeight: 1.75, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.25rem", flex: 1 }}>{post.sommario}</p>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", color: C.gold, fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif" }}>
+                  <h3 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1.25rem", color: C.text, fontWeight: 700, lineHeight: 1.2, marginBottom: "0.85rem", letterSpacing: "-0.01em" }}>{post.titolo}</h3>
+                  <p style={{ fontSize: "0.83rem", color: C.textMid, lineHeight: 1.75, fontFamily: "'Space Grotesk',sans-serif", marginBottom: "1.25rem", flex: 1 }}>{post.sommario}</p>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", color: C.gold, fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif" }}>
                     Read more <span>↗</span>
                   </div>
                 </div>
@@ -506,26 +506,26 @@ function Blog() {
             <Reveal>
               <div style={{ maxWidth: 760, margin: "0 auto" }}>
                 <button onClick={() => setAperto(null)}
-                  style={{ background: "none", border: `1px solid ${C.border}`, padding: "0.45rem 1rem", fontSize: "0.72rem", color: C.textMid, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", marginBottom: "2.5rem", transition: "all 0.2s" }}
+                  style={{ background: "none", border: `1px solid ${C.border}`, padding: "0.45rem 1rem", fontSize: "0.72rem", color: C.textMid, fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "0.1em", textTransform: "uppercase", cursor: "pointer", marginBottom: "2.5rem", transition: "all 0.2s" }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = C.gold; e.currentTarget.style.color = C.gold; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
                   ← All articles
                 </button>
                 <div style={{ display: "flex", gap: "1rem", alignItems: "center", marginBottom: "1.25rem" }}>
-                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.18em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", border: `1px solid ${C.border}`, padding: "0.2rem 0.6rem" }}>{post.categoria}</span>
-                  <span style={{ fontSize: "0.68rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif" }}>{new Date(post.data).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
+                  <span style={{ fontSize: "0.62rem", letterSpacing: "0.18em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", border: `1px solid ${C.border}`, padding: "0.2rem 0.6rem" }}>{post.categoria}</span>
+                  <span style={{ fontSize: "0.68rem", color: C.textSoft, fontFamily: "'Space Grotesk',sans-serif" }}>{new Date(post.data).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</span>
                 </div>
-                <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(1.8rem,4vw,2.8rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, marginBottom: "1rem", letterSpacing: "-0.02em" }}>{post.titolo}</h2>
-                <p style={{ fontSize: "1rem", color: C.gold, lineHeight: 1.75, fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontStyle: "italic", marginBottom: "2rem", paddingBottom: "2rem", borderBottom: `1px solid ${C.border}` }}>{post.sommario}</p>
+                <h2 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(1.8rem,4vw,2.8rem)", color: C.text, fontWeight: 700, lineHeight: 1.1, marginBottom: "1rem", letterSpacing: "-0.02em" }}>{post.titolo}</h2>
+                <p style={{ fontSize: "1rem", color: C.gold, lineHeight: 1.75, fontFamily: "'Lora','Georgia',serif", fontStyle: "italic", marginBottom: "2rem", paddingBottom: "2rem", borderBottom: `1px solid ${C.border}` }}>{post.sommario}</p>
                 {post.contenuto.map((blocco, i) => {
-                  if (blocco.tipo === "paragrafo") return <p key={i} style={{ fontSize: "0.95rem", color: C.textMid, lineHeight: 1.9, fontFamily: "'DM Sans',sans-serif", marginBottom: "1.25rem" }}>{blocco.testo}</p>;
-                  if (blocco.tipo === "titoletto") return <h3 key={i} style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.35rem", color: C.text, fontWeight: 700, marginBottom: "0.6rem", marginTop: "2rem", letterSpacing: "-0.01em" }}>{blocco.testo}</h3>;
+                  if (blocco.tipo === "paragrafo") return <p key={i} style={{ fontSize: "0.95rem", color: C.textMid, lineHeight: 1.9, fontFamily: "'Space Grotesk',sans-serif", marginBottom: "1.25rem" }}>{blocco.testo}</p>;
+                  if (blocco.tipo === "titoletto") return <h3 key={i} style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1.35rem", color: C.text, fontWeight: 700, marginBottom: "0.6rem", marginTop: "2rem", letterSpacing: "-0.01em" }}>{blocco.testo}</h3>;
                   if (blocco.tipo === "download") return (
                     <div key={i} style={{ display: "flex", gap: "1rem", flexWrap: "wrap", margin: "1.5rem 0" }}>
-                      <a href={blocco.src1} download style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", transition: "background 0.2s" }}
+                      <a href={blocco.src1} download style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", transition: "background 0.2s" }}
                         onMouseEnter={e => e.currentTarget.style.background = "#8a6520"}
                         onMouseLeave={e => e.currentTarget.style.background = C.gold}>↓ {blocco.label1}</a>
-                      <a href={blocco.src2} download style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: C.gold, padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", border: `1.5px solid ${C.gold}`, transition: "all 0.2s" }}
+                      <a href={blocco.src2} download style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "transparent", color: C.gold, padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", border: `1.5px solid ${C.gold}`, transition: "all 0.2s" }}
                         onMouseEnter={e => { e.currentTarget.style.background = C.gold; e.currentTarget.style.color = "#fff"; }}
                         onMouseLeave={e => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = C.gold; }}>↓ {blocco.label2}</a>
                     </div>
@@ -533,9 +533,9 @@ function Blog() {
                   return null;
                 })}
                 <div style={{ marginTop: "3rem", padding: "2rem", background: C.bg3, borderLeft: `3px solid ${C.gold}` }}>
-                  <p style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.1rem", color: C.text, marginBottom: "1rem", fontStyle: "italic" }}>Vuoi soggiornare a Cesenatico just steps from the sea.</p>
+                  <p style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1.1rem", color: C.text, marginBottom: "1rem", fontStyle: "italic" }}>Vuoi soggiornare a Cesenatico just steps from the sea.</p>
                   <a href={STRUTTURA.airbnb} target="_blank" rel="noopener noreferrer"
-                    style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", transition: "background 0.2s" }}
+                    style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: C.gold, color: "#fff", padding: "0.75rem 1.5rem", fontSize: "0.75rem", fontWeight: 800, letterSpacing: "0.12em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", transition: "background 0.2s" }}
                     onMouseEnter={e => e.currentTarget.style.background = "#8a6520"}
                     onMouseLeave={e => e.currentTarget.style.background = C.gold}>
                     Check availability on Airbnb ↗
@@ -560,20 +560,20 @@ function FinalCTA() {
       <div style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%) rotate(12deg)", width: "60vw", height: "60vw", border: "1px solid rgba(160,120,42,0.07)", maxWidth: 700, pointerEvents: "none" }} />
       <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
         <Reveal>
-          <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'DM Sans',sans-serif", marginBottom: "1.3rem" }}>Ready to book?</div>
-          <h2 style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "clamp(2rem,5vw,3.8rem)", color: C.text, fontWeight: 700, lineHeight: 1.05, marginBottom: "1.3rem", letterSpacing: "-0.025em" }}>
+          <div style={{ fontSize: "0.67rem", letterSpacing: "0.28em", color: C.gold, textTransform: "uppercase", fontFamily: "'Space Grotesk',sans-serif", marginBottom: "1.3rem" }}>Ready to book?</div>
+          <h2 style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "clamp(2rem,5vw,3.8rem)", color: C.text, fontWeight: 700, lineHeight: 1.05, marginBottom: "1.3rem", letterSpacing: "-0.025em" }}>
             Your seaside holiday<br /><span style={{ color: C.gold, fontStyle: "italic" }}>starts here.</span>
           </h2>
-          <p style={{ fontSize: "1rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'DM Sans',sans-serif", marginBottom: "2.5rem" }}>
+          <p style={{ fontSize: "1rem", color: C.textMid, lineHeight: 1.85, fontFamily: "'Space Grotesk',sans-serif", marginBottom: "2.5rem" }}>
             Summer dates fill up fast. Check availability on Airbnb now and secure your stay in Cesenatico.
           </p>
           <a href={STRUTTURA.airbnb} target="_blank" rel="noopener noreferrer"
-            style={{ display: "inline-flex", alignItems: "center", gap: "0.7rem", background: C.gold, color: "#fff", padding: "1.15rem 2.75rem", fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", boxShadow: "0 8px 32px rgba(160,120,42,0.28)", transition: "all 0.3s" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: "0.7rem", background: C.gold, color: "#fff", padding: "1.15rem 2.75rem", fontSize: "0.85rem", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", boxShadow: "0 8px 32px rgba(160,120,42,0.28)", transition: "all 0.3s" }}
             onMouseEnter={e => { e.currentTarget.style.background="#8a6520"; e.currentTarget.style.transform="translateY(-3px)"; }}
             onMouseLeave={e => { e.currentTarget.style.background=C.gold; e.currentTarget.style.transform="translateY(0)"; }}>
             Check availability on Airbnb ↗
           </a>
-          <div style={{ marginTop: "1.5rem", fontSize: "0.74rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em" }}>
+          <div style={{ marginTop: "1.5rem", fontSize: "0.74rem", color: C.textSoft, fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "0.1em" }}>
             Secure booking · Instant confirmation · Flexible cancellation
           </div>
         </Reveal>
@@ -589,37 +589,37 @@ function Footer() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }} className="footer-grid">
           <div>
-            <div style={{ fontFamily: "'Cormorant Garamond','Playfair Display',serif", fontSize: "1.1rem", color: C.gold, letterSpacing: "0.08em", fontWeight: 700, marginBottom: "0.9rem" }}>LA PERLA DEL MARE</div>
-            <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.82rem", color: C.textMid, lineHeight: 1.75, marginBottom: "0.65rem" }}>
+            <div style={{ fontFamily: "'Lora','Georgia',serif", fontSize: "1.1rem", color: C.gold, letterSpacing: "0.08em", fontWeight: 700, marginBottom: "0.9rem" }}>LA PERLA DEL MARE</div>
+            <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.82rem", color: C.textMid, lineHeight: 1.75, marginBottom: "0.65rem" }}>
               {STRUTTURA.indirizzo} · {STRUTTURA.citta} ({STRUTTURA.provincia})<br />{STRUTTURA.regione} · Italia {STRUTTURA.cap}
             </div>
-            <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: "0.76rem", color: C.textSoft, lineHeight: 1.7 }}>
+            <div style={{ fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.76rem", color: C.textSoft, lineHeight: 1.7 }}>
               Holiday apartment in Cesenatico, 400 m from the sea.<br />Near Cesena, Rimini, San Marino.
             </div>
           </div>
           <div>
-            <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Navigate</div>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.85rem" }}>Navigate</div>
             {[["Apartment", "Location", "Experiences", "Reviews", "Blog","blog"]].map(([l,id]) => (
-              <a key={l} href={`#${id}`} style={{ display: "block", color: C.textMid, textDecoration: "none", fontSize: "0.83rem", fontFamily: "'DM Sans',sans-serif", marginBottom: "0.5rem", transition: "color 0.2s" }}
+              <a key={l} href={`#${id}`} style={{ display: "block", color: C.textMid, textDecoration: "none", fontSize: "0.83rem", fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.5rem", transition: "color 0.2s" }}
                 onMouseEnter={e => e.target.style.color=C.gold} onMouseLeave={e => e.target.style.color=C.textMid}>
                 {l}
               </a>
             ))}
           </div>
           <div>
-            <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", marginBottom: "0.85rem" }}>Book</div>
+            <div style={{ fontSize: "0.67rem", letterSpacing: "0.18em", textTransform: "uppercase", color: C.textSoft, fontFamily: "'Space Grotesk',sans-serif", marginBottom: "0.85rem" }}>Book</div>
             <a href={STRUTTURA.airbnb} target="_blank" rel="noopener noreferrer"
-              style={{ display: "inline-block", background: C.gold, color: "#fff", padding: "0.55rem 1.1rem", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'DM Sans',sans-serif", transition: "background 0.2s" }}
+              style={{ display: "inline-block", background: C.gold, color: "#fff", padding: "0.55rem 1.1rem", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Space Grotesk',sans-serif", transition: "background 0.2s" }}
               onMouseEnter={e => e.currentTarget.style.background="#8a6520"}
               onMouseLeave={e => e.currentTarget.style.background=C.gold}>
               Airbnb ↗
             </a>
-            <div style={{ marginTop: "1.25rem", fontFamily: "'DM Sans',sans-serif", fontSize: "0.74rem", color: C.textSoft, lineHeight: 1.7 }}>Available on Airbnb.<br />Up to 6 guests.</div>
+            <div style={{ marginTop: "1.25rem", fontFamily: "'Space Grotesk',sans-serif", fontSize: "0.74rem", color: C.textSoft, lineHeight: 1.7 }}>Available on Airbnb.<br />Up to 6 guests.</div>
           </div>
         </div>
         <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.75rem" }}>
-          <div style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif" }}>© {new Date().getFullYear()} La Perla del Mare · Cesenatico · All rights reserved</div>
-          <div style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'DM Sans',sans-serif", letterSpacing: "0.1em" }}>WITH ♥ IN ROMAGNA</div>
+          <div style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'Space Grotesk',sans-serif" }}>© {new Date().getFullYear()} La Perla del Mare · Cesenatico · All rights reserved</div>
+          <div style={{ fontSize: "0.72rem", color: C.textSoft, fontFamily: "'Space Grotesk',sans-serif", letterSpacing: "0.1em" }}>WITH ♥ IN ROMAGNA</div>
         </div>
       </div>
       <style>{`@media(max-width:768px){.footer-grid{grid-template-columns:1fr!important;gap:2rem!important}}`}</style>
@@ -632,7 +632,7 @@ export default function App() {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
         html{scroll-behavior:smooth;}
         body{background:#faf8f4;color:#1a1612;-webkit-font-smoothing:antialiased;}
